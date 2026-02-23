@@ -1,3 +1,5 @@
+
+
 body {
     font-family: Arial, Helvetica, sans-serif;
     margin: 0;
@@ -47,12 +49,13 @@ body {
 /* ================= NAVIGACE ================= */
 
 .navbar {
-    background-color: #1b3e21;
+    background-color: #0a5617;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 40px;
     padding: 12px;
+    margin-bottom: 0;
+    font-size: 25px;
 }
 
 .nav-links {
@@ -78,6 +81,12 @@ body {
     object-fit: cover;
 }
 
+.nav-logo {
+    display: block;
+    width: 0;
+    height: 0;
+    overflow: hidden; /* skryje prázdný element */
+}
 
 /* ================= OBSAH ================= */
 
@@ -129,5 +138,19 @@ footer {
     color: white;
     text-align: center;
     padding: 15px;
-    margin-top: 60px;
+    margin-top: 1px;
+}
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 sloupce stejné šířky */
+    gap: 10px; /* mezera mezi obrázky */
+    max-width: 1000px; /* volitelné, aby galerie nebyla moc široká */
+    margin: 0 auto; /* vycentruje galerii */
+}
+
+.gallery img {
+    width: 100%;   /* obrázky vyplní sloupec */
+    height: auto;  /* zachová proporce */
+    border-radius: 8px;
+    object-fit: cover; /* vyplní rámeček a ořízne přebytek */
 }
